@@ -84,8 +84,10 @@ end
 #    should output the formatted list of holidays and their supplies
 
 def all_supplies_in_holidays(holiday_hash)
-  holiday_hash[season]
-
+  holiday_hash.each do |season, holiday|
+    puts "#{season.capitalize}:"
+    puts"  #{holiday.to_s.split('_').map {|w| w.capitalize }.join(' ') }: #{supplies.join(", ")}"
+    end
 end
 
 def all_holidays_with_bbq(holiday_hash)
