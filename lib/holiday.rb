@@ -67,9 +67,10 @@ end
 #     has all the winter supplies
 
 def all_winter_holiday_supplies(holiday_hash)
-  holiday_hash[:winter].collect do |holiday, supplies|
-    supplies
-  end.flatten
+  holiday_hash[:winter].values.flatten
+  # holiday_hash[:winter].collect do |holiday, supplies|
+  #   supplies
+  end
 end
 
 # iterate through holiday_hash and print items such that your readout resembles:
